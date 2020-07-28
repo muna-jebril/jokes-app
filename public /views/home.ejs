@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <%=Data.foreach(val=>{%>
+    <!-- <h2>
+        number of joke
+    </h2> -->
+    <h3><%= val.type%></h3>
+    <h4><%=val.setup%></h4>
+    <h5><%=val.punchline%></h5>
+    <%})%>
+ 
+</body>
+</html>

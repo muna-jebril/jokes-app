@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%=data.foreach(val=>{%>
+        <!-- <h2>
+            number of joke
+        </h2> -->
+        <h3><%= val.type%></h3>
+        <h4><%=val.setup%></h4>
+        <h5><%=val.punchline%></h5>
+
+
+        <form action="update/update_id?method="put" method="post">
+<input type="text" name="type" val=<%=val.type%>
+<input type="text" name="setup" val=<%=val.setup%>
+<input type="text" name="punchline" val=<%=val.punchline%>
+<button>update </button>
+
+
+
+        </form>
+        <form action="delete/delete_id?method=delete" method="post">
+        <button> delete </button>
+        </form>
+        <%})%>
+
+</body>
+</html>
